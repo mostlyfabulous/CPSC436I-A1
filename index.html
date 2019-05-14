@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 
 <head>
+<title>Message Board</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="dynamic.js"></script>
-  <h1>Message Board</h1>
-
+</head>
+  <button class="nav">
+    Home
+  </button>
+  <button class="nav">
+    About
+  </button>
+<h1>Message Board</h1>
   <body>
     <div id="container-div">
-      <p>
-
-      </p>
+        <h3 class="instruction">Write your message here:</h3>
+      <form action="javascript:void(0);">
+        <input type="text" id="message">
+        <button id="submitMessage">submit</button>
+      </form>
+      </div>
+    <div>
+      <ul class="messageList"><h2>Messages</h2>
+      </ul>
     </div>
   </body>
-</head>

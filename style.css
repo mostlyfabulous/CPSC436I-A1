@@ -1,13 +1,25 @@
+/* Themes—Generated from https://coolors.co/c5d86d-261c15-f7f7f2-e4e6c3-f05d23
+June Bud #C5D86D
+Eerie Black #261C15
+White Smoke #F7F7F2
+Pearl #E4E6C3
+Vivide Vermillion #F05D23
+https://coolors.co/594157-726da8-7d8cc4-a0d2db-bee7e8
+*/
+
 #container-div {
-  font-family: Arial, sans-serif;
+}
+
+h1 {
+
 }
 
 body {
+  margin: auto;
+  width: 90%;
   background-color: darkcyan;
-}
-
-span {
-  background-color: #98FB98;
+  font-family: Palatino, Verdana, sans-serif;
+  position: center;
 }
 
 img {
@@ -16,16 +28,38 @@ img {
   z-index: 1;
 }
 
-#vertical {
-  background-color: blue;
+input {
+  background-color: #E4E6C3;
 }
 
-#horizontal {
-  background-color: yellow;
+.nav {
+  color: #261C15;
+  text-emphasis: 1px 1px #261C15;
+  background-color: #F05D23;
+  width: 20%
 }
 
-#rand {
-  background-color: darkgreen;
+.messageList {
+  width: 80%;
+  border: 1px solid #261C15;
+  list-style-type: none;
+  background-color: #E4E6C3;
+}
+
+.messageList li{
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  padding: 0.5rem;
+  background-color: #F7F7F2;
+  border-width: 1px;
+  border-color: #261C15;
+  border-style: inset;
+  border-radius: 5px;
+  width: 90%;
+}
+
+li:hover {
+  background-color: #C5D86D;
 }
 
 .button_stuff {

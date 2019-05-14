@@ -1,29 +1,13 @@
-function setSize() {
-  var size = 0;
-  var randomNum = Math.floor(Math.random() * 10);
-  for (var i = 0; i < randomNum; i++) {
-    size += 10
-  }
-  return size;
+// addEventListener once page loads fully
+window.onload=function(){
+  document.getElementById('submitMessage').addEventListener("click", addMessage);
 }
 
-function moveVertical() {
-  var catPicture = document.getElementById('picture')
-  console.log('move vert');
-  if (catPicture) {
-    catPicture.style.top = setSize() + 'px'
-  }
-}
-
-function move() {
-  moveVertical();
-  moveHorizontal();
-}
-
-function moveHorizontal() {
-  var catPicture = document.getElementById('picture')
-  console.log('move hori');
-  if (catPicture) {
-    catPicture.style.left = setSize() + 'px'
-  }
+function addMessage() {
+  var msg = document.getElementById('message').value;
+  var msgList = document.getElementsByClassName('messageList')[0];
+  var node = document.createElement('LI');
+  var textNode = document.createTextNode(msg);
+  node.appendChild(textNode);
+  msgList.appendChild(node);
 }
