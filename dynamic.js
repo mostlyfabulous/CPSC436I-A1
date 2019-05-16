@@ -2,8 +2,8 @@
 window.onload=function(){
   document.getElementById('submitMessage').addEventListener("click", () =>
   {addMessage(document.getElementById('message').value)});
-
-  document.getElementById('clearMessages').addEventListener("click", clearAllMessages);
+  document.getElementById('clearMessage').addEventListener("click", clearText);
+  document.getElementById('deleteAllMessages').addEventListener("click", deleteMessages);
 
   loadMessages();
 }
@@ -28,6 +28,10 @@ function addMessage(msg) {
   }
 }
 
+function clearText() {
+  document.getElementById('message').value = "";
+}
+
 function loadMessages() {
   messageString = JSON.stringify(initialMessages);
   localStorage.setItem("testJSON", messageString);
@@ -38,7 +42,7 @@ function loadMessages() {
 
 }
 
-function clearAllMessages() {
+function deleteMessages() {
   var msgList = document.getElementsByClassName('messageList')[0];
   var msgListLen = msgList.childElementCount;
   for (var i = msgListLen; i > 1; i--)
