@@ -10,8 +10,7 @@ https://coolors.co/594157-726da8-7d8cc4-a0d2db-bee7e8
 #container-div {
   border: 1px solid #261C15;
   background-color: #E4E6C3;
-  padding-left: 0.3rem;
-  padding-bottom: 0.3rem;
+  padding: 0.3rem;
 }
 
 h1 {
@@ -53,6 +52,8 @@ input {
 }
 
 #message {
+  display: block;
+  margin: auto;
   padding: 0.2rem;
   width: 95%;
   height: 3rem;

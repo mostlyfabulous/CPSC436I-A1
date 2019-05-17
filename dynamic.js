@@ -6,6 +6,7 @@ window.onload=function(){
   document.getElementById('deleteAllMessages').addEventListener("click", deleteMessages);
 
   loadMessages();
+  deleteMsgListener();
 }
 
 var initialMessages = {
@@ -17,6 +18,12 @@ var initialMessages = {
   ]
 }
 
+function deleteMsgListener() {
+  // deletes message currently being hovered over upon a click
+  var msgList = document.getElementsByClassName('messageList')[0];
+  msgList.addEventListener("click", removeMessage);
+}
+
 function addMessage(msg) {
   // var msg = document.getElementById('message').value;
   if (msg) {
@@ -24,6 +31,7 @@ function addMessage(msg) {
     var node = document.createElement('LI');
     var textNode = document.createTextNode(msg);
     node.appendChild(textNode);
+    node.className = "delete";
     msgList.appendChild(node);
   }
 }
@@ -46,5 +54,12 @@ function deleteMessages() {
   var msgList = document.getElementsByClassName('messageList')[0];
   var msgListLen = msgList.childElementCount;
   for (var i = msgListLen; i > 1; i--)
-  msgList.removeChild(msgList.childNodes[i]);
+    msgList.removeChild(msgList.childNodes[i]);
+}
+
+function removeMessage() {
+  var a = document.querySelectorAll('li:hover');
+  var userDelete = confirm("Delete highlighted message?");
+  if (userDelete)
+    a[0].remove();
 }
