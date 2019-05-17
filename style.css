@@ -60,10 +60,21 @@ input {
   resize: none;
 }
 
-.nav {
-  margin-top: 0.2rem;
+a:link {
+  text-decoration: none;
   color: #261C15;
-  text-emphasis: 1px 1px #261C15;
+}
+
+a:link:hover{
+  opacity: 0.2;
+  transition: opacity 0.4s;
+}
+
+.nav {
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: Palatino, Verdana, sans-serif;
+  margin-top: 0.2rem;
   background-color: #F05D23;
   width: 20%
 }
@@ -90,9 +101,6 @@ input {
 
 li:hover {
   background-color: #C5D86D;
-}
-
-.button_stuff {
-  position: relative;
-  z-index: 1;
+  opacity: 0.6;
+  transition: opacity 0.4s;
 }
