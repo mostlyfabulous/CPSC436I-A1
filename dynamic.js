@@ -27,9 +27,13 @@ function deleteMsgListener() {
 function addMessage(msg) {
   // var msg = document.getElementById('message').value;
   if (msg) {
+    var user = document.getElementById('userName').value
     var msgList = document.getElementsByClassName('messageList')[0];
     var node = document.createElement('LI');
-    var textNode = document.createTextNode(msg);
+    var textNode = document.createTextNode(user + ": " + msg);
+    if (!user) {
+      textNode = document.createTextNode(msg);
+    }
     node.appendChild(textNode);
     node.className = "delete";
     msgList.appendChild(node);

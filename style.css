@@ -45,10 +45,9 @@ img {
 }
 
 input {
-  background-color: #E4E6C3;
-  text-align: left;
-  height: 3rem;
-  width: 80%;
+  display: block;
+  padding: 0.2rem;
+  background-color: #F7F7F2;
 }
 
 #message {
@@ -74,7 +73,7 @@ a:link:hover{
   font-size: 0.8rem;
   font-weight: bold;
   font-family: Palatino, Verdana, sans-serif;
-  margin-top: 0.2rem;
+  margin-top: 0.8rem;
   background-color: #F05D23;
   width: 20%
 }
